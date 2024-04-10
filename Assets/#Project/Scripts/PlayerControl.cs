@@ -30,6 +30,11 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         MoveX();
+        AutoMove();
+    }
+
+    private void AutoMove(){
+        transform.position += speed * Time.deltaTime * transform.forward;
     }
 
     private void MoveX()
